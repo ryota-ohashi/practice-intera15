@@ -1,30 +1,55 @@
+// :root {
+
+// }
+
+@use "./reset.scss";
+
+@font-face {
+	font-family: 'MyFont';
+	src: url('../../public/assets/font/DSEG14ModernMini-Regular.woff') format('woff'),
+	     url('../../public/assets/font/DSEG14ModernMini-Regular.woff2') format('woff2'),
+	     url('../../public/assets/font/DSEG14ModernMini-Regular.ttf')  format('truetype');
+}
+
 body {
   padding: 0;
   margin: 0;
   width: 100vw;
   height: 100vh;
   height: 100dvh;
+  min-height: 100vh;
   overflow: hidden;
-  background-color: #000;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .clock {
+  font-family: MyFont;
   color: #6f2dbd;
-  font-family: "Digital-7 Mono";
-  text-align: center;
+  padding: 30px 50px;
+  border-radius: 30px;
+  background-color: #000;
+  &_inner{
+    position: relative;
+  }
 }
 
 .time {
   font-size: 10rem;
-
+  text-align: center;
+  &_bg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+  }
 }
 
 .date {
-  margin-top: -50px;
+  margin-top: 10px;
   font-size: 1.5rem;
-
+  text-align: right;
 }
