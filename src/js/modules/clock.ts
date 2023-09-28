@@ -8,8 +8,8 @@ export default function digitalClock() {
   const month: number = now.getMonth() + 1;
   const day: number = now.getDate();
 
-  var daysName: string[] = ["Sun", "Mon", "Tue", "Wed ", "Thu", "Fri", "Sat"];
-  var dayOfWeek: string = daysName[now.getDay()];
+  let daysName: string[] = ["Sun", "Mon", "Tue", "Wed ", "Thu", "Fri", "Sat"];
+  let dayOfWeek: string = daysName[now.getDay()];
 
   hours = ("0" + hours).slice(-2);
   minutes = ("0" + minutes).slice(-2);
