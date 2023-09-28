@@ -1,7 +1,3 @@
-// :root {
-
-// }
-
 @use "./reset.scss";
 
 @font-face {
@@ -19,7 +15,7 @@ body {
   height: 100dvh;
   min-height: 100vh;
   overflow: hidden;
-  background-color: #fff;
+  background-color: var(--body-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,17 +23,17 @@ body {
 
 .clock {
   font-family: MyFont;
-  color: #6f2dbd;
-  padding: 30px 50px;
-  border-radius: 30px;
-  background-color: #000;
+  color: var(--clock-num);
+  padding: calc(30 / 1440 * 100vw) calc(50 / 1440 * 100vw);
+  font-size: calc(160 / 1440 * 100vw);
+  border-radius: calc(30 / 1440 * 100vw);
+  background-color: var(--clock-bg);
   &_inner{
     position: relative;
   }
 }
 
 .time {
-  font-size: 10rem;
   text-align: center;
   &_bg{
     position: absolute;
@@ -50,6 +46,6 @@ body {
 
 .date {
   margin-top: 10px;
-  font-size: 1.5rem;
+  font-size: 0.15em;
   text-align: right;
 }
